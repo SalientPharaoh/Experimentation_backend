@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<body style="font-family: georgia; color: rgb(137, 2, 63); background-color: rgb(251, 226, 237);">
+    <div class="mx-auto w-75">
+
+    <p><strong><span style="font-size: 36px;">&nbsp; Details</span></strong></p>
+    <p><span style="font-size: 20px;">Please fill the following details!</span></p>
+
+
+    <form method="POST" action="/instructions" class="mx-auto">
+    <input type="hidden" value={{email}} name="Email">
+    <div class="mb-3">
+        <div id="emailHelp" class="form-text">We'll never share your details with anyone else.</div>
+          <label for="exampleInputEmail1" class="form-label">Email</label><span style="font-family: Georgia, serif;">&nbsp;</span>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" name="check" value="1"><span style="font-family: Georgia, serif;">
+          <label class="form-check-label" for="exampleCheck1">Check to provide your consent</label>
+        </div>
+    <button type="submit" class="btn btn-dark mx-auto">Proceed</button>
+    </form>
+
+    </div>
+
+</body>
+
+{% endblock body %}

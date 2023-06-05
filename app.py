@@ -19,7 +19,7 @@ admin = database()
 def hello_world():
     return render_template('dump.html', check="1")
 
-@app.route("/instructions", methods=['GET', 'POST'])
+@app.route("/demographics", methods=['GET', 'POST'])
 def instruction():
     if request.method == 'POST':
         email=request.form['name']
@@ -34,7 +34,15 @@ def instruction():
         else:
             admin.insert({"Email":email ,"Date":date})
 
-    return render_template('index.html', email=email)
+        return render_template('demographic.html', email=email)
+
+
+@app.route("/instructions", methods=['GET', 'POST'])
+def demog():
+    if request.method == 'POST':
+        email=request.form['Email']
+        return render_template('index.html', email=email)
+    
 
 @app.route("/show_profile", methods=['GET', 'POST'])
 def print_about():

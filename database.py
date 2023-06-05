@@ -9,14 +9,14 @@ password = os.getenv('DATAPASSKEY')
 
 class database():
     def __init__(self):
-        self.uri = f"mongodb+srv://{username}:{password}@clipsurf.upczxaf.mongodb.net/?retryWrites=true&w=majority"
+        self.uri = f"mongodb+srv://{username}:{password}@cluster0.mqkoapa.mongodb.net/?retryWrites=true&w=majority"
         self.client = MongoClient(self.uri, server_api=ServerApi('1'))
         try:
             self.client.admin.command('ping')
         except Exception as e:
             return "Error"
-        self.db = self.client["Email_data"]
-        self.collection = self.db['Survey']
+        self.db = self.client["Whatwomendon'twant"]
+        self.collection = self.db['collect1']
 
     def insert(self,val):
         try:
