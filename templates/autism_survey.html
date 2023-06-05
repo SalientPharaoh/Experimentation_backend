@@ -1,0 +1,583 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h1>DBQ</h1>
+DBQ Questions here
+<div class="mx-auto w-75">
+  <form action="/thank_you" method="POST">
+    <div>
+        <label>Asks too many questions about you.</label><br>
+        <input type="radio" id="fname" name="one" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="one" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="one" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="one" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="one" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Looks unkept or disheveled.</label><br>
+        <input type="radio" id="fname" name="two" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="two" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="two" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="two" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="two" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Doesn't remember things that you mentioned earlier in the date.</label><br>
+        <input type="radio" id="fname" name="three" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="three" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="three" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="three" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="three" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Talks too little in the conversation, such that you are doing most of the talking.</label><br>
+        <input type="radio" id="fname" name="four" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="four" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="four" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="four" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="four" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Ends the date without any physical touch (eg. hug, goodnight kiss)</label><br>
+        <input type="radio" id="fname" name="five" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="five" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="five" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="five" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="five" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Makes unusual eye contact with you (eg. looks at you out of the corner of his eye).</label><br>
+        <input type="radio" id="fname" name="six" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="six" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="six" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="six" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="six" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Orients his body in a direction away from you.</label><br>
+        <input type="radio" id="fname" name="seven" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="seven" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="seven" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="seven" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="seven" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Has repetitive motor movements throughout the date (eg. lots of blinking, tapping
+            fingers)</label><br>
+        <input type="radio" id="fname" name="eight" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="eight" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="eight" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="eight" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="eight" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Has a tone of voice that is too negative (eg. sad, angry, fearful)
+        </label><br>
+        <input type="radio" id="fname" name="nine" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="nine" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="nine" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="nine" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="nine" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Seems very sensitive to loud noises, strong smells, or bright lights throughout the date.
+        </label><br>
+        <input type="radio" id="fname" name="ten" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="ten" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="ten" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="ten" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="ten" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Mismatches verbal and nonverbal communication cues (eg. smiling while talking about something sad ).
+        </label><br>
+        <input type="radio" id="fname" name="eleven" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="eleven" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="eleven" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="eleven" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="eleven" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+
+    <div>
+        <label>Doesn't show active listening behaviours while you are talking (eg., nodding, saying "mmhmm")
+        </label><br>
+        <input type="radio" id="fname" name="twelve" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="twelve" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="twelve" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="twelve" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="twelve" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Is dressed too formally or fancy for the date.
+        </label><br>
+        <input type="radio" id="fname" name="thirteen" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="thirteen" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="thirteen" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="thirteen" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="thirteen" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Chats about conversation topics that don’t interest you.
+        </label><br>
+        <input type="radio" id="fname" name="fourteen" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="fourteen" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="fourteen" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="fourteen" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="fourteen" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Does not compliment you during the date.
+        </label><br>
+        <input type="radio" id="fname" name="fifteen" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="fifteen" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="fifteen" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="fifteen" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="fifteen" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Chats about conversation topics that are too superficial, making it difficult to get to know one another.
+        </label><br>
+        <input type="radio" id="fname" name="sixteen" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="sixteen" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="sixteen" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="sixteen" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="sixteen" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Has a facial expression that is too flat.
+        </label><br>
+        <input type="radio" id="fname" name="seventeen" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="seventeen" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="seventeen" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="seventeen" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="seventeen" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Seems to forget your name while on the date.
+        </label><br>
+        <input type="radio" id="fname" name="eighteen" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="eighteen" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="eighteen" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="eighteen" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="eighteen" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Is dressed too casually or laid-back for the date.
+        </label><br>
+        <input type="radio" id="fname" name="nineteen" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="nineteen" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="nineteen" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="nineteen" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="nineteen" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Makes comments that are too blunt, direct, or critical toward you during the date.
+        </label><br>
+        <input type="radio" id="fname" name="twenty" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="twenty" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="twenty" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="twenty" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="twenty" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Interrupts you while you are talking.
+        </label><br>
+        <input type="radio" id="fname" name="twentyone" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="twentyone" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="twentyone" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="twentyone" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="twentyone" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Has a closed upper body (e.g., few or no hand gestures, arms crossed).
+        </label><br>
+        <input type="radio" id="fname" name="twentytwo" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="twentytwo" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="twentytwo" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="twentytwo" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="twentytwo" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Ends the date with too much physical touch.
+        </label><br>
+        <input type="radio" id="fname" name="twentythree" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="twentythree" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="twentythree" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="twentythree" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="twentythree" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Has a facial expression that is too negative (e.g., sad, angry, fearful).
+        </label><br>
+        <input type="radio" id="fname" name="twentyfour" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="twentyfour" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="twentyfour" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="twentyfour" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="twentyfour" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label> Arrives too late for the date.
+        </label><br>
+        <input type="radio" id="fname" name="twentyfive" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="twentyfive" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="twentyfive" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="twentyfive" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="twentyfive" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Seems too rigid and inflexible to changes throughout the date.
+        </label><br>
+        <input type="radio" id="fname" name="twentysix" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="twentysix" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="twentysix" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="twentysix" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="twentysix" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Does not respond to your comments in the conversation.
+        </label><br>
+        <input type="radio" id="fname" name="twentyseven" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="twentyseven" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="twentyseven" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="twentyseven" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="twentyseven" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Makes too much eye contact with you.
+        </label><br>
+        <input type="radio" id="fname" name="twentyeight" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="twentyeight" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="twentyeight" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="twentyeight" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="twentyeight" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Sits, stands, or leans too close to you, such that there is not enough space between the two of you.
+        </label><br>
+        <input type="radio" id="fname" name="twentynine" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="twentynine" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="twentynine" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="twentynine" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="twentynine" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Arrives too early for the date.
+        </label><br>
+        <input type="radio" id="fname" name="thirty" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="thirty" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="thirty" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="thirty" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="thirty" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Has bad breath or body odor on the date.
+        </label><br>
+        <input type="radio" id="fname" name="thirtyone" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="thirtyone" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="thirtyone" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="thirtyone" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="thirtyone" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Asks too few questions about you.
+        </label><br>
+        <input type="radio" id="fname" name="thirtytwo" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="thirtytwo" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="thirtytwo" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="thirtytwo" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="thirtytwo" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Keeps chatting about the same one or two conversation topics.
+        </label><br>
+        <input type="radio" id="fname" name="thirtythree" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="thirtythree" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="thirtythree" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="thirtythree" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="thirtythree" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Does not touch you at all during the date.
+        </label><br>
+        <input type="radio" id="fname" name="thirtyfour" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="thirtyfour" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="thirtyfour" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="thirtyfour" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="thirtyfour" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Sits, stands, or leans too far away from you, such that there is too much space between the two of you.
+        </label><br>
+        <input type="radio" id="fname" name="thirtyfive" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="thirtyfive" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="thirtyfive" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="thirtyfive" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="thirtyfive" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Ends the date too quickly or abruptly.
+        </label><br>
+        <input type="radio" id="fname" name="thirtysix" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="thirtysix" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="thirtysix" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="thirtysix" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="thirtysix" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Asks questions about you that are too personal for a first date.
+        </label><br>
+        <input type="radio" id="fname" name="thirtyseven" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="thirtyseven" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="thirtyseven" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="thirtyseven" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="thirtyseven" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Chats about conversation topics that are too eccentric or unusually specialized.
+        </label><br>
+        <input type="radio" id="fname" name="thirtyeight" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="thirtyeight" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="thirtyeight" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="thirtyeight" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="thirtyeight" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Touches you too much during the date.
+        </label><br>
+        <input type="radio" id="fname" name="thirtynine" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="thirtynine" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="thirtynine" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="thirtynine" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="thirtynine" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Appears distracted or disinterested while you are talking (e.g., fidgets, yawns, looks at phone).
+        </label><br>
+        <input type="radio" id="fname" name="fourty" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="fourty" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="fourty" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="fourty" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="fourty" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+    <div>
+        <label>Compliments you too much during the date.
+        </label><br>
+        <input type="radio" id="fname" name="fourtyone" value="5">
+        <label for="one">Strongly agree</label><br>
+        <input type="radio" id="fname" name="fourtyone" value="4">
+        <label for="one">Agree</label><br>
+        <input type="radio" id="fname" name="fourtyone" value="3">
+        <label for="one">Neutral</label><br>
+        <input type="radio" id="fname" name="fourtyone" value="2">
+        <label for="one">Disagree</label><br>
+        <input type="radio" id="fname" name="fourtyone" value="1">
+        <label for="one">Strongly disagree</label><br>
+    </div>
+
+
+    <input type="submit" value="Submit">
+</form>
+    </div>
+
+
+{% endblock body %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="mx-auto w-75">
+<p><strong><span style="font-size: 36px;">&nbsp; Dating Behaviours Questionnaire</span></strong></p>
+<p><span style="font-size: 20px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;This is a questionnaire containing descriptive statements of behaviours that commonly occur in the context of a date and need to be answered with the dating profile you were presented with, in mind. You need to read the statements and answer as if those behaviours were happening to you on a date with that person. Choose from the options provided the one that expresses your willingness to go on a second date with this person.&nbsp;</span></p>
+<div class="mx-auto">
+<form method="POST" action="/dbq">
+<button type="submit" class="btn btn-dark">Proceed to Questionnaire</button>
+</form>
+</div>
+</div>
+{% endblock body %}

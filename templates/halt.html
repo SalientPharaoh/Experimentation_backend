@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="mx-auto w-75">
+<p><strong><span style="font-size: 36px;">&nbsp; Knowledge about Autism Survey</span></strong></p>
+<p><span style="font-size: 20px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;This survey contains statements related to knowledge and beliefs about Autism Spectrum Disorder. Kindly read it carefully and answer honestly.&nbsp;</span></p>
+
+<div class="mx-auto w-75">
+    <form action="/autism_survey" method="POST" class="mx-auto t-5 w-75" >
+        <button type="submit" class="btn btn-dark">Proceed to Survey</button>
+      </form>
+    </div>
+
+  </div>
+{% endblock body %}

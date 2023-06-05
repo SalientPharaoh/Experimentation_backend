@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div>
+    <form action="/halt_screen" method="POST" class="mx-auto t-5 w-75" >
+        <div class="mb-3">
+          <div>
+            <label><h3>Based on the profile, do you think the person has autism?</h3>
+            </label><br>
+            <input type="radio" id="fname" name="autism" value="1">
+            <label for="one">Yes</label><br>
+            <input type="radio" id="fname" name="autism" value="0">
+            <label for="one">No</label><br>
+        </div>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+
+{% endblock body %}

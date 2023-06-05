@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<body style="font-family: georgia; color: rgb(137, 2, 63); background-color: rgb(251, 226, 237);">
+    <div class="mx-auto w-75">
+
+    <p><strong><span style="font-size: 36px;">&nbsp; Instructions</span></strong></p>
+    <p><span style="font-size: 20px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;You are instructed to go on a romantic date with a person. Their dating profile will be presented to you shortly. Kindly read through it and answer the questionnaire accordingly.&nbsp;</span></p>
+
+
+    <form method="POST" action="/show_profile" class="mx-auto">
+    <button type="submit" class="btn btn-dark mx-auto">Proceed</button>
+    </form>
+
+    </div>
+
+</body>
+
+{% endblock body %}
