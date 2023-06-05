@@ -1,21 +1,23 @@
-import random
-from datetime import datetime
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
-class profiles():
+username = os.getenv('USER')
+password = os.getenv('DATAPASSKEY')
+
+class database():
     def __init__(self):
-        self.options=["AA","AAwL","AT","ATwL","TA","TAwL","TT","TTwL"]
-        self.choice=""
-    def select(self):
-        self.choice= random.choice(self.options)
-        return self.choice
-    
+        self.uri = f"mongodb+srv://{username}:{password}@clipsurf.upczxaf.mongodb.net/?retryWrites=true&w=majority"
+        self.client = MongoClient(self.uri, server_api=ServerApi('1'))
+        try:
+            self.client.admin.command('ping')
+        except Exception as e:
+            return "Error"
+        self.db = self.client["Email_data"]
+        self.collection = self.db['Survey']
 
-d={"AA":0,"AAwL":0,"AT":0,"ATwL":0,"TA":0,"TAwL":0,"TT":0,"TTwL":0}
-
-for i in range(100):
-    obj=profiles()
-    d[obj.select()]+=1
-
-print(d)
-
-print(datetime.now().strftime("%d/%m/%Y"))
+    def get_csv(self):
+        data =  self.collection.find({})
+        pass
