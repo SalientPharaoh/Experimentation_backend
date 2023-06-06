@@ -41,6 +41,21 @@ def instruction():
 def demog():
     if request.method == 'POST':
         email=request.form['Email']
+        name = request.form['name']
+        age = request.form['age']
+        gender = request.form['gender']
+        orientation = request.form['sexual orientation']
+        education = request.form['education']
+        occupation = request.form['occupation']
+        city = request.form['cityofresidence']
+        status = request.form['currentrelationshipstatus']
+        past = request.form['romantic past']
+        datepast = request.form['app past']
+        datepresent = request.form['app present']
+        diagnosis = request.form['diagnosis']
+        know = request.form['knowsomeone']
+        data={"name":name, "age":age, "gender":gender, "sexual orientation":orientation, "education":education, "occupation":occupation, "city of residence":city, "current relationship status":status, "romantic past":past, "date past":datepast, "date present":datepresent, "has autism":diagnosis, "know someone":know}
+        admin.update({"Email":email},data)
         return render_template('index.html', email=email)
     
 
@@ -71,7 +86,7 @@ def dbq():
 @app.route("/surveyone", methods=['GET', 'POST'])
 def surveyone():
     if request.method == 'POST':
-        op=['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty','twentyone','twentytwo','twentythree','twentyfour','twentyfive','twentysix','twentyseven','twentyeight','twentynine','thirty','thirtyone','thirtytwo','thirtythree','thirtyfour','thirtyfive','thirtysix','thirtyseven','thirtyeight','thirtynine','fourty','fourtyone']
+        op=['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty','twentyone','twentytwo','twentythree','twentyfour','twentyfive','twentysix','twentyseven','twentyeight','twentynine','thirty','thirtyone','thirtytwo','thirtythree','thirtyfour','thirtyfive','thirtysix','thirtyseven','thirtyeight','thirtynine','fourty','fourtyone','fourtytwo']
         q1=[request.form[i] for i in op]
         email=request.form['Email']
         admin.update({"Email":email}, {"DBQ":q1})
@@ -96,7 +111,7 @@ def autism_survey():
 @app.route("/thank_you", methods=['GET', 'POST'])
 def thank_you():
     if request.method == 'POST':
-        op=['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty','twentyone','twentytwo','twentythree','twentyfour','twentyfive','twentysix','twentyseven','twentyeight','twentynine','thirty','thirtyone','thirtytwo','thirtythree','thirtyfour','thirtyfive','thirtysix','thirtyseven','thirtyeight','thirtynine','fourty','fourtyone']
+        op=['one','two','three','four','five','six','seven','eight','nine','ten','eleven','tweleve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty','twentyone','twentytwo']
         q1=[request.form[i] for i in op]
         email=request.form['Email']
         admin.update({"Email":email},{"KKA":q1})

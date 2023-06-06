@@ -1,314 +1,254 @@
 {% extends 'base.html' %}
 {% block body %}
 
-<h1>DBQ</h1>
-DBQ Questions here
+<h1>Questionnaire</h1>
+PLease answer the below questions
 <div class="mx-auto w-75">
   <form action="/thank_you" method="POST">
     <input type="hidden" value={{email}} name="Email">
     <div>
-        <label>Asks too many questions about you.</label><br>
-        <input type="radio" id="fname" name="one" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="one" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="one" value="3">
-        <label for="one">Neutral</label><br>
+        <label>The character "Sheldon" in Big Bang Theory is an accurate portrayal of an autistic person.</label><br>
         <input type="radio" id="fname" name="one" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">True</label><br>
+        <input type="radio" id="fname" name="one" value="3">
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="one" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="one" value="0">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Looks unkept or disheveled.</label><br>
-        <input type="radio" id="fname" name="two" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="two" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="two" value="3">
-        <label for="one">Neutral</label><br>
+        <label>Movies such as "Rainman" show an accurate depiction of all autistic people</label><br>
+        <input type="radio" id="fname" name="two" value="0">
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="two" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="two" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="two" value="3">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Doesn't remember things that you mentioned earlier in the date.</label><br>
-        <input type="radio" id="fname" name="three" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="three" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="three" value="3">
-        <label for="one">Neutral</label><br>
+        <label>Autistic people are eternally childlike.</label><br>
+        <input type="radio" id="fname" name="three" value="0">
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="three" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="three" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="three" value="3">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Talks too little in the conversation, such that you are doing most of the talking.</label><br>
-        <input type="radio" id="fname" name="four" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="four" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="four" value="3">
-        <label for="one">Neutral</label><br>
+        <label>Autism is described in the news in a balanced way.</label><br>
+        <input type="radio" id="fname" name="four" value="0">
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="four" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="four" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="four" value="3">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Ends the date without any physical touch (eg. hug, goodnight kiss)</label><br>
-        <input type="radio" id="fname" name="five" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="five" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="five" value="3">
-        <label for="one">Neutral</label><br>
+        <label>You can tell a person is autistic by looking at them.</label><br>
+        <input type="radio" id="fname" name="five" value="0">
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="five" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="five" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="five" value="3">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Makes unusual eye contact with you (eg. looks at you out of the corner of his eye).</label><br>
-        <input type="radio" id="fname" name="six" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="six" value="4">
-        <label for="one">Agree</label><br>
+        <label>Vaccines do not cause autism.</label><br>
         <input type="radio" id="fname" name="six" value="3">
-        <label for="one">Neutral</label><br>
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="six" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="six" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="six" value="0">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Orients his body in a direction away from you.</label><br>
-        <input type="radio" id="fname" name="seven" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="seven" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="seven" value="3">
-        <label for="one">Neutral</label><br>
+        <label>Autistic people can choose what behaviours they display in public.</label><br>
         <input type="radio" id="fname" name="seven" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">True</label><br>
+        <input type="radio" id="fname" name="seven" value="3">
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="seven" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="seven" value="0">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Has repetitive motor movements throughout the date (eg. lots of blinking, tapping
-            fingers)</label><br>
-        <input type="radio" id="fname" name="eight" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="eight" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="eight" value="3">
-        <label for="one">Neutral</label><br>
+        <label>Autistic people experience emotions differently to people who do not have autism.</label><br>
+        <input type="radio" id="fname" name="eight" value="0">
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="eight" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="eight" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="eight" value="3">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Has a tone of voice that is too negative (eg. sad, angry, fearful)
-        </label><br>
-        <input type="radio" id="fname" name="nine" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="nine" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="nine" value="3">
-        <label for="one">Neutral</label><br>
+        <label>Autistic people do not understand sarcasm in jokes and can take them literally.</label><br>
         <input type="radio" id="fname" name="nine" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">True</label><br>
+        <input type="radio" id="fname" name="nine" value="3">
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="nine" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="nine" value="0">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Seems very sensitive to loud noises, strong smells, or bright lights throughout the date.
-        </label><br>
-        <input type="radio" id="fname" name="ten" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="ten" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="ten" value="3">
-        <label for="one">Neutral</label><br>
+        <label>Autistic people can learn to become less sensitive to stimuli such as noise, touch and smell.</label><br>
+        <input type="radio" id="fname" name="ten" value="0">
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="ten" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="ten" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="ten" value="3">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Mismatches verbal and nonverbal communication cues (eg. smiling while talking about something sad ).
-        </label><br>
-        <input type="radio" id="fname" name="eleven" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="eleven" value="4">
-        <label for="one">Agree</label><br>
+        <label>Autistic people have difficulty understanding what to do in social situations.</label><br>
         <input type="radio" id="fname" name="eleven" value="3">
-        <label for="one">Neutral</label><br>
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="eleven" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="eleven" value="1">
-        <label for="one">Strongly disagree</label><br>
-    </div>
-
-    <div>
-        <label>Doesn't show active listening behaviours while you are talking (eg., nodding, saying "mmhmm")
-        </label><br>
-        <input type="radio" id="fname" name="twelve" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="twelve" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="twelve" value="3">
-        <label for="one">Neutral</label><br>
-        <input type="radio" id="fname" name="twelve" value="2">
-        <label for="one">Disagree</label><br>
-        <input type="radio" id="fname" name="twelve" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="eleven" value="0">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Is dressed too formally or fancy for the date.
-        </label><br>
-        <input type="radio" id="fname" name="thirteen" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="thirteen" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="thirteen" value="3">
-        <label for="one">Neutral</label><br>
+        <label>Autism is a stable condition that does not vary from day to day.</label><br>
+        <input type="radio" id="fname" name="tweleve" value="0">
+        <label for="one">True</label><br>
+        <input type="radio" id="fname" name="tweleve" value="2">
+        <label for="one">Somewhat true</label><br>
+        <input type="radio" id="fname" name="tweleve" value="1">
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="tweleve" value="3">
+        <label for="one">Not true</label><br>
+    </div>
+    <div>
+        <label>Autism never occurs in adults.</label><br>
+        <input type="radio" id="fname" name="thirteen" value="0">
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="thirteen" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="thirteen" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="thirteen" value="3">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Chats about conversation topics that don’t interest you.
-        </label><br>
-        <input type="radio" id="fname" name="fourteen" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="fourteen" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="fourteen" value="3">
-        <label for="one">Neutral</label><br>
+        <label>Autistic people are sensitive to certain stimuli such as noise, touch and smell.</label><br>
         <input type="radio" id="fname" name="fourteen" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">True</label><br>
+        <input type="radio" id="fname" name="fourteen" value="3">
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="fourteen" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="fourteen" value="0">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Does not compliment you during the date.
-        </label><br>
-        <input type="radio" id="fname" name="fifteen" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="fifteen" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="fifteen" value="3">
-        <label for="one">Neutral</label><br>
+        <label>All autistic people have intellectual disability.</label><br>
+        <input type="radio" id="fname" name="fifteen" value="0">
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="fifteen" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="fifteen" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="fifteen" value="3">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Chats about conversation topics that are too superficial, making it difficult to get to know one another.
-        </label><br>
-        <input type="radio" id="fname" name="sixteen" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="sixteen" value="4">
-        <label for="one">Agree</label><br>
+        <label>Autism has a range of symptoms and severities.</label><br>
         <input type="radio" id="fname" name="sixteen" value="3">
-        <label for="one">Neutral</label><br>
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="sixteen" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="sixteen" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="sixteen" value="0">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Has a facial expression that is too flat.
-        </label><br>
-        <input type="radio" id="fname" name="seventeen" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="seventeen" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="seventeen" value="3">
-        <label for="one">Neutral</label><br>
+        <label>Autism only occurs in children.</label><br>
+        <input type="radio" id="fname" name="seventeen" value="0">
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="seventeen" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="seventeen" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="seventeen" value="3">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Seems to forget your name while on the date.
-        </label><br>
-        <input type="radio" id="fname" name="eighteen" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="eighteen" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="eighteen" value="3">
-        <label for="one">Neutral</label><br>
+        <label>All autistic people have a genius level of intellect.</label><br>
+        <input type="radio" id="fname" name="eighteen" value="0">
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="eighteen" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="eighteen" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="eighteen" value="3">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Is dressed too casually or laid-back for the date.
-        </label><br>
-        <input type="radio" id="fname" name="nineteen" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="nineteen" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="nineteen" value="3">
-        <label for="one">Neutral</label><br>
+        <label>All autistic people have the same strengths.</label><br>
+        <input type="radio" id="fname" name="nineteen" value="0">
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="nineteen" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="nineteen" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="nineteen" value="3">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Makes comments that are too blunt, direct, or critical toward you during the date.
-        </label><br>
-        <input type="radio" id="fname" name="twenty" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="twenty" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="twenty" value="3">
-        <label for="one">Neutral</label><br>
+        <label>All autistic people have the same challenges.</label><br>
+        <input type="radio" id="fname" name="twenty" value="0">
+        <label for="one">True</label><br>
         <input type="radio" id="fname" name="twenty" value="2">
-        <label for="one">Disagree</label><br>
+        <label for="one">Somewhat true</label><br>
         <input type="radio" id="fname" name="twenty" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="twenty" value="3">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Interrupts you while you are talking.
-        </label><br>
-        <input type="radio" id="fname" name="twentyone" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="twentyone" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="twentyone" value="3">
-        <label for="one">Neutral</label><br>
-        <input type="radio" id="fname" name="twentyone" value="2">
-        <label for="one">Disagree</label><br>
-        <input type="radio" id="fname" name="twentyone" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label>The level of support required by autistic people does not change with age.</label><br>
+        <input type="radio" id="fname" name="twenty one" value="0">
+        <label for="one">True</label><br>
+        <input type="radio" id="fname" name="twenty one" value="2">
+        <label for="one">Somewhat true</label><br>
+        <input type="radio" id="fname" name="twenty one" value="1">
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="twenty one" value="3">
+        <label for="one">Not true</label><br>
     </div>
     <div>
-        <label>Has a closed upper body (e.g., few or no hand gestures, arms crossed).
-        </label><br>
-        <input type="radio" id="fname" name="twentytwo" value="5">
-        <label for="one">Strongly agree</label><br>
-        <input type="radio" id="fname" name="twentytwo" value="4">
-        <label for="one">Agree</label><br>
-        <input type="radio" id="fname" name="twentytwo" value="3">
-        <label for="one">Neutral</label><br>
-        <input type="radio" id="fname" name="twentytwo" value="2">
-        <label for="one">Disagree</label><br>
-        <input type="radio" id="fname" name="twentytwo" value="1">
-        <label for="one">Strongly disagree</label><br>
+        <label>Autistic people can be employed in competitive paying jobs.</label><br>
+        <input type="radio" id="fname" name="twenty two" value="3">
+        <label for="one">True</label><br>
+        <input type="radio" id="fname" name="twenty two" value="2">
+        <label for="one">Somewhat true</label><br>
+        <input type="radio" id="fname" name="twenty two" value="1">
+        <label for="one">I don't know</label><br>
+        <input type="radio" id="fname" name="twenty two" value="0">
+        <label for="one">Not true</label><br>
     </div>
-
+    <div>
     <input type="submit" value="Submit">
 </form>
     </div>

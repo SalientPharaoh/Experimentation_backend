@@ -2,27 +2,24 @@
 {% block body %}
 
 <body style="font-family: georgia; color: rgb(137, 2, 63); background-color: rgb(251, 226, 237);">
-    <div class="mx-auto w-75">
-
-    <p><strong><span style="font-size: 36px;">&nbsp; Details</span></strong></p>
-    <p><span style="font-size: 20px;">Please fill the following details!</span></p>
-
-
-    <form method="POST" action="/instructions" class="mx-auto">
+  <h1><span style="font-family: Georgia, serif; color: rgb(137, 2, 63);">Demographics Form</span></h1>
+  <form action="/instructions" method="POST"><label for="name">
     <input type="hidden" value={{email}} name="Email">
-    <div class="mb-3">
-        <div id="emailHelp" class="form-text">We'll never share your details with anyone else.</div>
-          <label for="exampleInputEmail1" class="form-label">Email</label><span style="font-family: Georgia, serif;">&nbsp;</span>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name">
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" name="check" value="1"><span style="font-family: Georgia, serif;">
-          <label class="form-check-label" for="exampleCheck1">Check to provide your consent</label>
-        </div>
-    <button type="submit" class="btn btn-dark mx-auto">Proceed</button>
-    </form>
-
-    </div>
+    <span style="font-family: Georgia, serif; color: rgb(137, 2, 63);">Name</span><span style="color: rgb(137, 2, 63);">:</span></label><span style="color: rgb(137, 2, 63);"><input type="text" id="name" name="name" required=""><br><br><label for="age"><span style="font-family: Georgia, serif;">Age</span>:</label> <input type="number" id="age" name="age" required=""><br><br><label for="gender"><span style="font-family: Georgia, serif;">Gender:</span></label></span><span style="font-family: Georgia, serif; color: rgb(137, 2, 63);">&nbsp;<select id="gender" name="gender" required="">&nbsp;<option value="">Select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>&nbsp;
+          </select><br></span><span style="color: rgb(137, 2, 63);"><br><label for="sexual orientation"><span style="font-family: Georgia, serif;">Sexual Orientation:</span></label></span><span style="font-family: Georgia, serif; color: rgb(137, 2, 63);">&nbsp;<select id="sexual orientation" name="sexual orientation" required="">&nbsp;<option value="">Select</option>
+              <option value="Heterosexual/Straight">Heterosexual/Straight</option>
+              <option value="Homosexual/Lesbian">Homosexual/Lesbian</option>
+              <option value="Bisexual/Pansexual">Bisexual/Pansexual</option>&nbsp;
+          </select><br></span><span style="color: rgb(137, 2, 63);"><br><label for="education"><span style="font-family: Georgia, serif;">Education:</span></label></span><span style="font-family: Georgia, serif; color: rgb(137, 2, 63);"><input type="text" id="education" name="education" required=""><br></span><span style="color: rgb(137, 2, 63);"><br><label for="occupation"><span style="font-family: Georgia, serif;">Occupation:</span></label></span><span style="font-family: Georgia, serif; color: rgb(137, 2, 63);"><input type="text" id="occupation" name="occupation" required=""><br></span><span style="color: rgb(137, 2, 63);"><br><label for="cityofresidence"><span style="font-family: Georgia, serif;">City of Residence</span></label></span><span style="font-family: Georgia, serif; color: rgb(137, 2, 63);"><input type="text" id="cityofresidence" name="cityofresidence" required=""><br></span><span style="color: rgb(137, 2, 63);"><br><label for="currentrelationshipstatus"><span style="font-family: Georgia, serif;">Current relationship status:</span></label></span><span style="font-family: Georgia, serif; color: rgb(137, 2, 63);">&nbsp;<select id="currentrelationshipstatus" name="currentrelationshipstatus" required="">&nbsp;<option value="">Select</option>
+              <option value="In a relationship">In a relationship</option>
+              <option value="Single/Not in a relationship">Single/Not in a relationship</option>
+              <option value="In a non-monogamous relationship">In a non-monogamous relationship</option>
+              <option value="Married">Married</option>
+              <option value="Divorced">Divorced</option>&nbsp;
+          </select><br></span><span style="color: rgb(137, 2, 63);"><br><label for="romantic past"><span style="font-family: Georgia, serif;">Have you ever been in a romantic relationship in the past?:</span></label></span><span style="font-family: Georgia, serif; color: rgb(137, 2, 63);"><input type="radio" id="yes" name="romantic past" value="yes" required=""> <label for="yes">Yes</label><br></span><span style="color: rgb(137, 2, 63);"><input type="radio" id="no" name="romantic past" value="no" required="" checked="true"> <label for="no"><span style="font-family: Georgia, serif;">No</span></label><br><br><label for="app past"><span style="font-family: Georgia, serif;">Have you used a dating app in the past?:</span></label></span><span style="font-family: Georgia, serif; color: rgb(137, 2, 63);"><input type="radio" id="yes" name="app past" value="yes" required=""> <label for="yes">Yes</label><br></span><span style="color: rgb(137, 2, 63);"><input type="radio" id="no" name="app past" value="no" required=""> <label for="no"><span style="font-family: Georgia, serif;">No</span></label><br><br><label for="app present"><span style="font-family: Georgia, serif;">Are you currently using a dating app?:</span></label></span><span style="font-family: Georgia, serif; color: rgb(137, 2, 63);"><input type="radio" id="yes" name="app present" value="yes" required=""> <label for="yes">Yes</label><br><input type="radio" id="no" name="app present" value="no" required=""> <label for="no">No</label><br></span><span style="color: rgb(137, 2, 63);"><br><label for="diagnosis"><span style="font-family: Georgia, serif;">Have you been diagnosed with autism spectrum disorder?:</span></label></span><span style="font-family: Georgia, serif; color: rgb(137, 2, 63);"><input type="radio" id="yes" name="diagnosis" value="yes" required=""> <label for="yes">Yes</label><br></span><span style="color: rgb(137, 2, 63);"><input type="radio" id="no" name="diagnosis" value="no" required=""> <label for="no"><span style="font-family: Georgia, serif;">No</span></label><br><br><label for="knowsomeone"><span style="font-family: Georgia, serif;">Do you know someone who has been diagnosed with autism spectrum disorder?:</span></label></span><span style="font-family: Georgia, serif; color: rgb(137, 2, 63);"><input type="radio" id="yes" name="knowsomeone" value="yes" required=""> <label for="yes">Yes</label><br><input type="radio" id="no" name="knowsomeone" value="no" required=""> <label for="no">No</label><br></span><br><input type="submit" value="Submit"></form>
 
 </body>
 

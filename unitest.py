@@ -20,4 +20,8 @@ class database():
 
     def get_csv(self):
         data =  self.collection.find({})
-        pass
+        for i in data:
+            print(i)
+
+obj = database()
+obj.get_csv()
