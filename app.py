@@ -111,12 +111,13 @@ def autism_survey():
 @app.route("/thank_you", methods=['GET', 'POST'])
 def thank_you():
     if request.method == 'POST':
-        op=['one','two','three','four','five','six','seven','eight','nine','ten','eleven','tweleve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty','twenty_one','twenty_two']
+        op=['one','two','three','four','five','six','seven','eight','nine','ten','eleven','tweleve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty']
         q1=[request.form[i] for i in op]
+        q1.append(request.form["twenty_one"])
+        q1.append(request.form["twenty_two"])
         email=request.form['Email']
         admin.update({"Email":email},{"KKA":q1})
-
-    return render_template("thank_you.html")
+        return render_template("thank_you.html")
 
 if __name__ == "__main__":
     app.run(debug=False)

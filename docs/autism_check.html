@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body style="color: rgb(137, 2, 63); background-color: rgb(251, 226, 237);">
+    <p><span style="font-family: Georgia, serif;">{% extends &apos;base.html&apos; %} {% block body %}</span></p>
+    <div>
+        <form action="/halt_screen" method="POST" class="mx-auto t-5 w-75">
+            <div class="mb-3"><span style="font-family: Georgia, serif;"><input type="hidden" value="{{email}}" name="Email"></span>
+                <div><span style="font-family: Georgia, serif;"><label>
+                            <h3>Based on the profile, did you notice a diagnostic label of autism?</h3>
+                        </label><br><input type="radio" id="fname" name="autism" value="1"> <label for="one">Yes<br></label><br><input type="radio" id="fname" name="autism" value="0"> <label for="one">No</label></span></div>
+                <p><span style="font-family: Georgia, serif;"><br></span></p>
+            </div><span style="font-family: Georgia, serif;"><input type="submit" value="Submit"></span>
+        </form>
+    </div>
+    <p><span style="font-family: Georgia, serif;">{% endblock body %}</span></p>
+</body>
+
+</html>

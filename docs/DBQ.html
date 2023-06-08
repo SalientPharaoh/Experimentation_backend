@@ -1,12 +1,17 @@
-{% extends 'base.html' %}
-{% block body %}
+<!DOCTYPE html>
+<html>
 
-<h1>Questionnaire</h1>
-PLease answer the below questions
-<div class="mx-auto w-75">
-  <form action="/surveyone" method="POST">
-    <input type="hidden" value={{email}} name="Email">
-    <div><span style="color: rgb(137, 2, 63); font-family: Georgia, serif;"><label><strong>Asks too many questions about you.</strong></label><br><input type="radio" id="fname" name="one" value="5" required=""> <label for="one">Strongly agree</label><br><input type="radio" id="fname" name="one" value="4"> <label for="one">Agree</label><br><input type="radio" id="fname" name="one" value="3"> <label for="one">Neutral</label><br><input type="radio" id="fname" name="one" value="2"> <label for="one">Disagree</label><br><input type="radio" id="fname" name="one" value="1"> <label for="one">Strongly disagree</label><br></span></div>
+<head>
+    <title></title>
+</head>
+
+<body style="color: rgb(137, 2, 63); background-color: rgb(251, 226, 237);">
+    <p>{% extends &apos;base.html&apos; %} {% block body %}</p>
+    <h1><span style="color: rgb(137, 2, 63); font-family: Georgia, serif;">Questionnaire</span></h1>
+    <p><span style="color: rgb(137, 2, 63); font-family: Georgia, serif;">PLease answer the below questions</span></p>
+    <div class="mx-auto w-75">
+        <form action="/surveyone" method="POST"><span style="color: rgb(137, 2, 63); font-family: Georgia, serif;"><input type="hidden" value="{{email}}" name="Email"></span>
+            <div><span style="color: rgb(137, 2, 63); font-family: Georgia, serif;"><label><strong>Asks too many questions about you.</strong></label><br><input type="radio" id="fname" name="one" value="5" required=""> <label for="one">Strongly agree</label><br><input type="radio" id="fname" name="one" value="4"> <label for="one">Agree</label><br><input type="radio" id="fname" name="one" value="3"> <label for="one">Neutral</label><br><input type="radio" id="fname" name="one" value="2"> <label for="one">Disagree</label><br><input type="radio" id="fname" name="one" value="1"> <label for="one">Strongly disagree</label><br></span></div>
             <div style="margin-top: 20px;">
                 <!-- Add margin-top for spacing --><span style="color: rgb(137, 2, 63); font-family: Georgia, serif;">&nbsp;<label><strong>Looks unkept or disheveled.</strong></label><br><input type="radio" id="fname" name="two" value="5" required=""> <label for="one">Strongly agree</label><br><input type="radio" id="fname" name="two" value="4"> <label for="one">Agree</label><br><input type="radio" id="fname" name="two" value="3"> <label for="one">Neutral</label><br><input type="radio" id="fname" name="two" value="2"> <label for="one">Disagree</label><br><input type="radio" id="fname" name="two" value="1"> <label for="one">Strongly disagree</label><br></span></div>
             <div style="margin-top: 20px;">
@@ -89,8 +94,9 @@ PLease answer the below questions
                 <!-- Add margin-top for spacing --><span style="color: rgb(137, 2, 63); font-family: Georgia, serif;">&gt; <label><strong>Appears distracted or disinterested while you are talking (e.g., fidgets, yawns, looks at phone).&nbsp;</strong></label><br><input type="radio" id="fname" name="fourtyone" value="5" required=""> <label for="one">Strongly agree</label><br><input type="radio" id="fname" name="fourtyone" value="4"> <label for="one">Agree</label><br><input type="radio" id="fname" name="fourtyone" value="3"> <label for="one">Neutral</label><br><input type="radio" id="fname" name="fourtyone" value="2"> <label for="one">Disagree</label><br><input type="radio" id="fname" name="fourtyone" value="1"> <label for="one">Strongly disagree</label><br></span></div>
             <div style="margin-top: 20px;">
                 <!-- Add margin-top for spacing --><span style="color: rgb(137, 2, 63); font-family: Georgia, serif;">&gt; <label><strong>Compliments you too much during the date.&nbsp;</strong></label><br><input type="radio" id="fname" name="fourtytwo" value="5" required=""> <label for="one">Strongly agree</label><br><input type="radio" id="fname" name="fourtytwo" value="4"> <label for="one">Agree</label><br><input type="radio" id="fname" name="fourtytwo" value="3"> <label for="one">Neutral</label><br><input type="radio" id="fname" name="fourtytwo" value="2"> <label for="one">Disagree</label><br><input type="radio" id="fname" name="fourtytwo" value="1"></span><label for="one"><span style="color: rgb(137, 2, 63); font-family: Georgia, serif;">Strongly disagree</span></label></div><input type="submit" value="Submit">
-</form>
+        </form>
     </div>
+    <p>{% endblock body %}</p>
+</body>
 
-
-{% endblock body %}
+</html>
